@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trip Planner | XploreTN</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+    <nav class="navbar">
+        <h1>XploreTN</h1>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="planner.html">Planner</a></li>
+            <li><a href="packages.html">Packages</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+    <section class="planner-section">
+
+        <h2>Plan Your Trip</h2>
+
+        <div class="planner-card">
+
+            <label>Select Destination</label>
+
+            <select id="destination">
+                <option>Kodaikanal</option>
+                <option>Ooty</option>
+                <option>Kanyakumari</option>
+                <option>Madurai</option>
+                <option>Theni</option>
+            </select>
+
+            <label>Trip Duration</label>
+
+            <select id="days">
+                <option>1 Day</option>
+                <option>2 Days</option>
+                <option>3 Days</option>
+                <option>4 Days</option>
+                <option>5 Days</option>
+            </select>
+
+            <label>Budget</label>
+
+            <select id="budget">
+                <option>Low</option>
+                <option>Medium</option>
+                <option>High</option>
+            </select>
+
+            <button onclick="generatePlan()">
+                Generate Trip Plan
+            </button>
+            <button onclick="downloadPDF()">
+    📄 Download PDF
+</button>
+
+        </div>
+
+        <div id="result"></div>
+
+    </section>
+
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="js/planner.js"></script>
+</body>
+</html>
