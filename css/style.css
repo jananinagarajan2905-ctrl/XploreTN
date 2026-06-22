@@ -6,7 +6,7 @@ html{
     --primary:#14532D;
     --secondary:#22C55E;
     --accent:#86EFAC;
-    --accent-hover:#4ADE80;
+    --hover:#4ADE80;
     --background:#FAFAF9;
     --card:#FFFFFF;
     --text:#1F2937;
@@ -111,7 +111,10 @@ body{
     outline:none;
 }
 
-.search-box button{
+.search-box button,
+.hero-btn,
+.destination-details button,
+.planner-card button{
     padding:12px 20px;
     border:none;
     border-radius:8px;
@@ -121,24 +124,20 @@ body{
     transition:.3s;
 }
 
-.search-box button:hover{
-    background:var(--accent-hover);
+.search-box button:hover,
+.hero-btn:hover,
+.destination-details button:hover,
+.planner-card button:hover{
+    background:var(--hover);
 }
 
-/* ================= BUTTONS ================= */
+/* ================= BUTTON ================= */
 
 .hero-btn{
     display:inline-block;
+    text-decoration:none;
     padding:14px 28px;
     border-radius:10px;
-    text-decoration:none;
-    background:var(--accent);
-    color:#fff;
-    transition:.3s;
-}
-
-.hero-btn:hover{
-    background:var(--accent-hover);
 }
 
 /* ================= COMMON SECTIONS ================= */
@@ -160,7 +159,7 @@ body{
     font-size:2.5rem;
 }
 
-/* ================= HOME CARDS ================= */
+/* ================= HOME ================= */
 
 .home-grid,
 .feature-grid,
@@ -171,12 +170,17 @@ body{
     gap:25px;
 }
 
-.home-card{
-    width:280px;
+.home-card,
+.feature-card,
+.contact-card{
     background:var(--card);
     border-radius:15px;
-    overflow:hidden;
     box-shadow:var(--shadow);
+}
+
+.home-card{
+    width:280px;
+    overflow:hidden;
     transition:.3s;
 }
 
@@ -199,10 +203,7 @@ body{
 
 .feature-card{
     width:320px;
-    background:var(--card);
     padding:30px;
-    border-radius:15px;
-    box-shadow:var(--shadow);
     text-align:center;
     border-top:4px solid var(--accent);
 }
@@ -274,17 +275,8 @@ body{
 .destination-details button{
     margin-top:15px;
     padding:12px 24px;
-    border:none;
-    border-radius:10px;
-    background:var(--accent);
-    color:#fff;
-    cursor:pointer;
     font-size:1rem;
-    transition:.3s;
-}
-
-.destination-details button:hover{
-    background:var(--accent-hover);
+    border-radius:10px;
 }
 
 /* ================= CONTACT ================= */
@@ -301,11 +293,9 @@ body{
 
 .contact-card{
     width:280px;
-    background:#F0FDF4;
     padding:25px;
-    border-radius:15px;
     text-align:center;
-    box-shadow:var(--shadow);
+    background:#F0FDF4;
 }
 
 .contact-card h3{
@@ -351,18 +341,7 @@ footer{
 }
 
 .planner-card button{
-    padding:12px;
-    border:none;
-    border-radius:8px;
-    background:var(--accent);
-    color:#fff;
-    cursor:pointer;
     margin-top:10px;
-    transition:.3s;
-}
-
-.planner-card button:hover{
-    background:var(--accent-hover);
 }
 
 #result{
