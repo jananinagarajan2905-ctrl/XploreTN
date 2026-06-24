@@ -1,4 +1,4 @@
-function generatePlan(){
+function generatePlan() {
 
     let destination =
         document.getElementById("destination").value;
